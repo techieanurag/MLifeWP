@@ -1,0 +1,128 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="sdkRSSReaderCS.whyBlood"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <Grid x:Name="LayoutRoot" Margin="0,0,0,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="/sdkRSSReaderCS;component/Images/bg1.jpg" Stretch="None" />
+        </Grid.Background>
+        <!--Pivot Control-->
+        <controls:Pivot Foreground="White" Margin="0,0,0,-25">
+            <!--Pivot item one-->
+            <controls:PivotItem Header="Why?">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="226" />
+                        <ColumnDefinition Width="230" />
+                    </Grid.ColumnDefinitions>
+                    <ListBox Padding="10" Height="636" Margin="0,-29,0,0" Grid.ColumnSpan="2">
+                        <TextBlock FontSize="35" Width="468" Height="59" Style="{StaticResource PhoneTextLargeStyle}" Margin="0"><Bold Foreground="Maroon">Why should I donate blood?</Bold></TextBlock>
+                        <TextBlock Foreground="Black" Style="{StaticResource PhoneTextLargeStyle}" FontSize="25" TextWrapping="Wrap"><Run>Blood is the most precious gift that anyone can give to another person — the gift of life. </Run><LineBreak /><LineBreak /><Run>Safe blood saves lives and improves health. Blood transfusion is needed for:</Run>
+                        <LineBreak /><LineBreak />* Every three seconds, someone needs a blood transfusion.
+                            <LineBreak /><LineBreak />* Women with complications of pregnancy, such as ectopic pregnancies and haemorrhage before, during or after childbirth.
+   <LineBreak /><LineBreak />* Children with severe anaemia often resulting from malaria or malnutrition,
+   <LineBreak /><LineBreak />* People with severe trauma following accidents. 
+    <LineBreak /><LineBreak />* Many surgical and cancer patients.
+<LineBreak /><LineBreak />* Giving blood is 100 percent safe.
+                            <LineBreak /><LineBreak />* About 60 percent of the population are eligible to donate blood, yet less than 4 percent do.
+                            <LineBreak /><LineBreak />* If all donors donate 4 to 6 times a year, blood needs would be met and shortages could be a thing of the past.
+                            <LineBreak /><LineBreak />
+                        </TextBlock>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            <!--Pivot item two-->
+            <controls:PivotItem Header="Who Can?">
+                <Grid>
+                    <ListBox Padding="10" Margin="0,-37,0,0">
+                        <TextBlock Foreground="Maroon" Style="{StaticResource PhoneTextLargeStyle}" Margin="0"><Bold>Who can Donate Blood</Bold></TextBlock>
+                        <TextBlock Foreground="Black" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap" FontSize="25" Margin="0" ><LineBreak /> Any healthy adult (he or she) can donate blood. Men once in every three months and women in every four months.<LineBreak /><LineBreak />The universally accepted criteria for donor selection are: -    
+                        <LineBreak /><LineBreak />* Age between 18 to 55 years.<LineBreak /><LineBreak />* Body weight: not less than 50kg.<LineBreak /><LineBreak />* Wait if you have a fever or a productive cough (bringing up phlegm). Wait if you do not feel well on the day of donation. Wait until you have completed antibiotic treatment for sinus, throat or lung infection.
+                            <LineBreak /><LineBreak />* your last blood donation was 3 months earlier.
+
+                        </TextBlock>
+
+                    </ListBox>
+
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="Who Can't?">
+                <Grid>
+                    <ListBox Padding="10" Margin="0,-37,0,0">
+                        <TextBlock TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" FontSize="35" Margin="0" Width="444" Height="107" ><Bold Foreground="Maroon" >The following people should avoid donating blood:-</Bold></TextBlock>
+                        <TextBlock Foreground="Black"  TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" FontSize="25">
+                            <LineBreak />
+                            * Persons who have had an attack of infection like jaundice, rubella, typhoid or malaria.
+                           <LineBreak /> <LineBreak />* Persons with any systemic disease like heart disease, kidney disease, liver problems, blood disorders or asthma should NOT donate blood.
+                           <LineBreak /> <LineBreak />* Persons suffering from infections transmitted through transfusions like HIV, Hepatitis, Syphilis etc should Not donate blood.
+                           <LineBreak /> <LineBreak />* Person who have undergone surgery in the previous six months.
+                           <LineBreak /> <LineBreak />* Persons who are on steroids, hormonal supplements or certain specified medication.
+                           <LineBreak /> <LineBreak />* Persons with multiple sexual partners or those who are addicted to drugs.
+                           <LineBreak /> <LineBreak />* Those who have undergone various vaccinations for the corresponding period specified below:
+                            <LineBreak />The period in which Donation should be avoided: 
+                           <LineBreak /> <LineBreak />* Hepatitis B (6 months)
+                           <LineBreak /> <LineBreak />* Live vaccines (2 weeks)
+                            <LineBreak /><LineBreak />* Killed vaccines (48 hours)
+                            <LineBreak /><LineBreak />* Rabies (1 year)
+
+                        </TextBlock>
+                    </ListBox>
+                </Grid>
+
+            </controls:PivotItem>
+            <controls:PivotItem Header="Myth vs Facts">
+                <Grid>
+                    <ListBox Padding="10" Margin="0,-37,0,0">
+                        <TextBlock Foreground="Black"  FontSize="25" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle }"  Margin="0" Width="446">
+                            <LineBreak /><Bold Foreground="Red">Myth</Bold> : It is unhealthy to give some blood<LineBreak /><Bold Foreground="Green">Fact </Bold>: About 470ml of blood is taken during donation session.The body makes new blood after donation.There is enough blood to donate it without any ill effects.
+                            <LineBreak /><LineBreak /><Bold Foreground="Red">Myth</Bold> : Giving blood is time consuming<LineBreak /><Bold Foreground="Green">Fact </Bold>: It takes not more than an hour or so.
+                            <LineBreak /><LineBreak /><Bold Foreground="Red">Myth</Bold> : Giving blood hurts<LineBreak /><Bold Foreground="Green">Fact </Bold>: The pain experienced is no more than a needle prick.
+                            <LineBreak /><LineBreak /><Bold Foreground="Red">Myth</Bold> : Can not take part in any physical activities after donating blood. <LineBreak /><Bold Foreground="Green">Fact </Bold>: It does not interfere with ability to perform physically.But avoid  heavy lifting or strenuous workouts for the rest of the day after donation.You can get back on track the next day.
+                            <LineBreak /> <LineBreak /><Bold Foreground="Red">Myth</Bold> : HIV or other infections can be contracted from donating blood.<LineBreak /><Bold Foreground="Green">Fact </Bold>:  A clear procedure exists for taking blood from each donor. Sterility is maintained at all steps. A sterile, new needle is used for each donation and is then properly discarded. Use of sterile equipment and technique limits the chance of infection.
+                            <LineBreak /> <LineBreak /><Bold Foreground="Red">Myth</Bold> : Donating blood at frequent intervals make my body iron deficient. <LineBreak /><Bold Foreground="Green">Fact </Bold>: A healthy person can donate 4 times a year at an interval of 12 weaks.
+                            <LineBreak /><LineBreak /><Bold Foreground="Red">Myth</Bold> : Health deteriorates after donating blood.<LineBreak /><Bold Foreground="Green">Fact </Bold>: If you are healthy prior to donation, your recovery is complete in a day or two. It is advised to rest a while after donating. Drinking enough liquids replaces the lost fluid within a couple of hours. The body produces new cells faster after a donation. All the RBCs are replaced within 3-4 days and WBCs within 3 weeks.
+                            <LineBreak /><LineBreak /><Bold Foreground="Red">Myth</Bold> : Frequent Smokers cannot donate blood.<LineBreak /><Bold Foreground="Green">Fact </Bold>: Smokers can donate blood as long as they do not smoke for 2 hours before an d after donation.
+                            <LineBreak /><LineBreak /><Bold Foreground="Red">Myth</Bold> : I suffer from diabetes, I cannot donate blood<LineBreak /><Bold Foreground="Green">Fact </Bold>: If you are on oral medication for diabetes and are not insulin-dependent, you are a good candidate to donate blood. All you need to do is keep a few of these parameters in mind before you donate. You should not have donated blood for at least 56 days, and  should be generally healthy. If you suffer from high blood pressure or any other heart disease, make sure to consult your doctor before you donate blood.
+
+                        </TextBlock>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="30">
+            <shell:ApplicationBarIconButton IconUri="home.png" Text="home" Click="homeIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="filter.png" Text="filter" Click="filterIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="contact.png" Text="contact" Click="contact_Menu" />
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Click="timeLine_Menu" Text="timeline"/>
+                <shell:ApplicationBarMenuItem Click="bloodD_Menu" Text="Blood Donors"/>
+                <shell:ApplicationBarMenuItem Click="whyO_Menu" Text="Why donate organs"/>
+                <shell:ApplicationBarMenuItem Click="whyB_Menu" Text="Why donate blood"/>
+                <shell:ApplicationBarMenuItem Click="organR_Menu" Text="Organ Request"/>
+                <shell:ApplicationBarMenuItem Click="bloodR_Menu" Text="Blood Request"/>
+                <shell:ApplicationBarMenuItem Click="cityChange_Menu" Text="Change Your City"/>
+                <shell:ApplicationBarMenuItem Click="filterNow_Menu" Text="Filter Now"/>
+                <shell:ApplicationBarMenuItem Click="supportUs_Menu" Text="Support meNeedLife"/>
+                <shell:ApplicationBarMenuItem Click="howTo_Menu" Text="How to use MeNeedLife"/>
+                <shell:ApplicationBarMenuItem Click="aboutUs_Menu" Text="About Us"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,144 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="sdkRSSReaderCS.whyOrgan"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/sdkRSSReaderCS;component/Images/bg1.jpg" Stretch="None" />
+        </Grid.Background>
+        <!--Pivot Control-->
+        <controls:Pivot Foreground="White" >
+            <!--What is organ donation-->
+            <controls:PivotItem Header="What?" Foreground="Black">
+                <Grid>
+                    <ListBox Padding="10" Height="652" Margin="0,-45,0,0">
+                        <TextBlock FontWeight="Bold" Margin="-2 0 0 0" Foreground="ForestGreen" Style="{StaticResource PhoneTextLargeStyle}" FontSize="35"><Bold>What is organ donation?</Bold> <LineBreak /></TextBlock>
+                        <TextBlock Foreground="Black" Style="{StaticResource PhoneTextLargeStyle}"  TextWrapping="Wrap" FontSize=" 25" Height="309" Margin="0"><Run>It is the donation of organ or tissue of human body, from living or dead person to a living recipient in need of a transplantation.</Run>
+                        <LineBreak /><LineBreak /> <Run>The person who donates the organs is called donor while the person who receives the organ is known as recipient.   
+                    </Run></TextBlock>
+                        <TextBlock FontWeight="Bold" Foreground="ForestGreen" Margin="-2 0 0 0" Style="{StaticResource PhoneTextLargeStyle}" FontSize="35" Width="446" Height="75">Body Donation</TextBlock>
+                        <TextBlock Foreground="Black" FontSize="25" TextWrapping="Wrap" Width="446"  Style="{StaticResource PhoneTextLargeStyle}" Margin="0">It is the donation of the whole body after death for medical research and education.Body donation is useful for understanding the human body and for advancing science.</TextBlock>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+
+            <!--Who can be a donor-->
+            <controls:PivotItem Header="Who?">
+                <Grid>
+                    <ListBox Height="573" Margin="0,-38,0,0">
+                        <TextBlock FontWeight="Bold" Foreground="ForestGreen" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap" FontSize="35" Height="76" Width="456"><Bold>Who can be a Donor :</Bold></TextBlock>
+                        <TextBlock Foreground="Black" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" FontSize="25"> All of us can be a donor, irrespective of caste, religions, age, community and present or previous medical condition.
+                    <LineBreak /><LineBreak />Anyone, who is 18 years of age and above can be a legal donor. Parents or Guardians consent will be required for any individual below 18 years, who is willing to donate an organ.
+                    <LineBreak /><LineBreak />Presence of active Cancer, active HIV, active infection(eg. Sepsis) or Intravenous (IV) drug use would rule out any kind of donation.
+                        </TextBlock>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            <!--Which organs and tissues can be donated-->
+            <controls:PivotItem Header="Which?">
+                <ListBox Padding="10" Height="573" Margin="0,-38,0,0">
+                    <TextBlock FontWeight="Bold" Foreground="ForestGreen" Style="{StaticResource PhoneTextLargeStyle}" FontSize="35" TextWrapping="Wrap" Width="456" Height="116"> <Bold>Organs and Tissues can be donated:</Bold></TextBlock>
+                    <TextBlock Foreground="Black" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}" FontSize="25">Vital Organs like  heart, kidneys, pancreas, lungs, liver and intestines can be donated in case of 'brain death'.
+                    You can also donate Eyes and tissues such as heart valves, cardiovascular tissue, bone and soft musculoskeletal tissues along with cells like skin cells.<LineBreak />
+                    </TextBlock>
+
+                    <TextBlock FontWeight="Bold" Foreground="ForestGreen" FontSize="35" Width="446" Style="{StaticResource PhoneTextLargeStyle}" Height="67"><Bold>Organs in Body Donation:</Bold></TextBlock>
+                    <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="25" Style="{StaticResource PhoneTextLargeStyle}">The complete body may be donated for the purpose of medical education and medical research.
+                    <LineBreak /><LineBreak />
+                    </TextBlock>
+
+                </ListBox>
+            </controls:PivotItem>
+
+            <!-- Why organ donation is necessary -->
+            <controls:PivotItem Header="Why Donate?">
+
+                <Grid Height="533">
+                    <ListBox Padding="10"  Height="573" Margin="0,-38,0,0">
+                        <TextBlock FontSize="35" FontWeight="Bold" Foreground="ForestGreen" Height="68" Style="{StaticResource PhoneTextLargeStyle}"><Bold>Why Donate?</Bold></TextBlock>
+                        <TextBlock Foreground="Black" FontSize="25" TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}">Every year, thousands of people die while waiting for a transplant,because no suitable donor can be found for them. <LineBreak /></TextBlock>
+                        <TextBlock FontSize="35" FontWeight="Bold" Foreground="ForestGreen" Height="70" Style="{StaticResource PhoneTextLargeStyle}"><Bold>Do you know :</Bold>
+                        </TextBlock>
+                        <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="25" Style="{StaticResource PhoneTextLargeStyle}">* More than 400,000 peoples die because of non-availability of organs.
+                            <LineBreak /><LineBreak />* 200,000 people dies because of liver disease.
+                            <LineBreak /><LineBreak />* More than 90,000 kidney transplants per year required in India.
+                        <LineBreak /><LineBreak />* Annually around 4,000–5,000 patients in Indian require a heart transplant.
+                        <LineBreak /><LineBreak />India, with a population around 1.2 billion, statistics leaves at 0.08 donors per million population.This is an incredibly small and insignificant as compared to the number of requirement.
+                            <LineBreak /><LineBreak /><LineBreak />Is it not an irony that despite our billion-plus population we still experience a huge paucity of organs.
+                        </TextBlock>
+                    </ListBox>
+
+                </Grid>
+
+            </controls:PivotItem>
+
+            <!-- BENEFITS -->
+            <controls:PivotItem Header="Benefits">
+                <Grid>
+                    <ListBox Padding="10" Height="573" Margin="0,-38,0,0">
+                        <TextBlock FontWeight="Bold" Foreground="ForestGreen" FontSize="35" Width="456" Height="69" Style="{StaticResource PhoneTextLargeStyle}"><Bold>Gift of Life </Bold></TextBlock>
+                        <TextBlock Foreground="Black" FontSize="25"  TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}">* One donor can give life to several people.
+                        <LineBreak /><LineBreak />* Organ donation is the greatest form of human service.
+                        <LineBreak /><LineBreak />* The knowledge that just one organ and tissue donor can potentially save the life or improve its quality for 10 others, should be enough  motivation for this nobel act.
+                        </TextBlock>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            <!--Pivot item Myths vs. reality-->
+            <controls:PivotItem Header="Myth Vs Reality">
+
+                <Grid Margin="0,0,0,424">
+                    <ListBox Padding="10" Margin="0,-38,0,-420" Height="569">
+                        <TextBlock Foreground="Black" Padding="8" TextWrapping="Wrap" FontSize="25"  Style="{StaticResource PhoneTextLargeStyle}" Margin="0"> <Bold Foreground="Red">Myth</Bold> : Will the doctors just let me die if they know I will be donating my organs? <LineBreak /><Bold Foreground="Green">Reality </Bold> : No; Your doctors will take the utmost efforts to save your life. This is their first duty. If despite their efforts, the patient dies, only then will the organs/tissues will be considered for donation. These doctors will not be involved with the organ transplantation, a complete different set of doctors will take over for the further procedures.
+                        <LineBreak /><LineBreak /><Bold Foreground="Red">Myth</Bold> : Organ donation is against my religion.<LineBreak /><Bold Foreground="Green">Reality </Bold> : All religions in India consider organ donation as an Act of Charity, support it.
+                        <LineBreak /><LineBreak /><Bold Foreground="Red">Myth</Bold> : Organ and tissue donation will disfigure my body.<LineBreak /><Bold Foreground="Green">Reality </Bold> : Organ and tissue donation doesn't disfigure the body. Donated organs are removed surgically, which doesn't disfigure the body. Also since the donor's body is clothed for burial, so there are no visible signs of organ or tissue donation.>
+                        <LineBreak /><LineBreak /><Bold Foreground="Red">Myth</Bold> : Will my family have to pay for donation?<LineBreak /><Bold Foreground="Green">Reality </Bold> : No; A family of an organ, tissue and/or eye donor is never responsible for costs related to donation.
+                        <LineBreak /> <LineBreak /><Bold Foreground="Red">Myth :</Bold> As a Hindu, if I donate organs, I will be born without them in my next birth.<LineBreak /><Bold Foreground="Green">Reality </Bold> : When a Hindu is cremated, the entire body is consigned to flames and destroyed by fire. As per scriptures, the only element not destroyed is the soul. The physical body does not survive death anyway, so the organs hold no relevance in rebirth as they are destructible. It is the everlasting soul that is reborn.
+                        <LineBreak /><LineBreak /><Bold Foreground="Red">Myth</Bold> :  People can buy and sell organs<LineBreak /><Bold Foreground="Green">Reality </Bold> : The 'Transplant of Human Organs Act' prohibits any commercial dealing in organs and makes it a punishable offence.
+                        <LineBreak />  <LineBreak /><Bold Foreground="Red">Myth</Bold> : The Rich get priority in waiting list <LineBreak /><Bold Foreground="Green">Reality </Bold> : No, the recipient has to be on state waiting list for receiving organs. Clinical criteria like blood group, immunological status,and medical urgency are considered for the transplantation. There is no discrimination based on money, colour, race and religion.
+                        <LineBreak /> <LineBreak /><Bold Foreground="Red">Myth</Bold> : Aren’t I too old to be a donor?<LineBreak /><Bold Foreground="Green">Reality </Bold> : Not necessarily; It’s important not to rule yourself out! Your medical history is more important than your age.
+                        </TextBlock>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="30">
+            <shell:ApplicationBarIconButton IconUri="home.png" Text="home" Click="homeIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="filter.png" Text="filter" Click="filterIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="contact.png" Text="contact" Click="contact_Menu" />
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Click="timeLine_Menu" Text="timeline"/>
+                <shell:ApplicationBarMenuItem Click="bloodD_Menu" Text="Blood Donors"/>
+                <shell:ApplicationBarMenuItem Click="whyO_Menu" Text="Why donate organs"/>
+                <shell:ApplicationBarMenuItem Click="whyB_Menu" Text="Why donate blood"/>
+                <shell:ApplicationBarMenuItem Click="organR_Menu" Text="Organ Request"/>
+                <shell:ApplicationBarMenuItem Click="bloodR_Menu" Text="Blood Request"/>
+                <shell:ApplicationBarMenuItem Click="cityChange_Menu" Text="Change Your City"/>
+                <shell:ApplicationBarMenuItem Click="filterNow_Menu" Text="Filter Now"/>
+                <shell:ApplicationBarMenuItem Click="supportUs_Menu" Text="Support meNeedLife"/>
+                <shell:ApplicationBarMenuItem Click="howTo_Menu" Text="How to use MeNeedLife"/>
+                <shell:ApplicationBarMenuItem Click="aboutUs_Menu" Text="About Us"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

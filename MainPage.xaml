@@ -1,0 +1,96 @@
+<!-- 
+    Copyright (c) 2011 Microsoft Corporation.  All rights reserved.
+    Use of this sample source code is subject to the terms of the Microsoft license 
+    agreement under which you licensed this sample source code and is provided AS-IS.
+    If you did not accept the terms of the license agreement, you are not authorized 
+    to use this sample source code.  For the terms of the license, please see the 
+    license agreement between you and Microsoft.
+    
+    To see all Code Samples for Windows Phone, visit http://go.microsoft.com/fwlink/?LinkID=219604
+-->
+<phone:PhoneApplicationPage 
+    x:Class="sdkRSSReaderCS.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/sdkRSSReaderCS;component/Images/bg1.jpg" Stretch="None" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" Foreground="White" Text="meHome" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Height="94" Width="454" />
+        </StackPanel>
+        <Grid Margin="0,112,0,-24" Grid.RowSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="628" />
+                <RowDefinition Height="84" />
+            </Grid.RowDefinitions>
+            <!--ContentPanel - place additional content here-->
+            <Button Background="ForestGreen" Height="230" HorizontalAlignment="Left" Padding="0" Margin="10,6,0,0" Name="organDonors" VerticalAlignment="Top" Width="230" Click="organDonors_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/dOrganIcon.png" Height="196" Width="196"/>
+            </Button>
+            <Button Background="Red" Padding="0" Height="230" HorizontalAlignment="Left" Margin="231,6,0,0" Name="bloodDonors" VerticalAlignment="Top" Width="230" Click="bloodDonors_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/dBloodIcon.png" Height="196" Width="196"/>
+            </Button>
+            <Button Background="SeaGreen" Padding="0" Height="120" HorizontalAlignment="Left" Margin="10,230,0,0" Name="requestOrgan" VerticalAlignment="Top" Width="230" Click="requestOrgan_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/rOrganIcon.png" Height="100" Width="200"/>
+            </Button>
+            <Button Background="Crimson" Padding="0" Height="120" HorizontalAlignment="Left" Margin="231,230,0,0" Name="requestBlood" VerticalAlignment="Top" Width="230" Click="requestBlood_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/rBloodIcon.png" Height="100" Width="200"/>
+            </Button>
+            <Button Background="SteelBlue" Padding="0" Height="120" HorizontalAlignment="Left" Margin="10,345,0,0" Name="myCity" VerticalAlignment="Top" Width="120" Click="myCity_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/cityIcon.png" Height="90" Width="90"/>
+            </Button>
+            <Button Background="DarkSlateBlue" Padding="0" Height="120" HorizontalAlignment="Left" Margin="120,345,0,0" Name="filterNow" VerticalAlignment="Top" Width="120" Click="filterNow_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/filterIcon.png" Height="90" Width="90"/>
+            </Button>
+            <Button Background="Black" Padding="0" Height="120" HorizontalAlignment="Left" Margin="231,345,0,0" Name="supportUs" VerticalAlignment="Top" Width="120" Click="supportUs_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/supportIcon.png" Height="90" Width="90"/>
+            </Button>
+            <Button Background="Sienna" Padding="1" Height="120" HorizontalAlignment="Left" Margin="341,345,0,0" Name="aboutUs" VerticalAlignment="Top" Width="120" Click="aboutUs_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/aboutIcon1.png" Height="90" Width="90"/>
+            </Button>
+            <Button Background="LightSeaGreen" Padding="0"  Height="120" HorizontalAlignment="Left" Margin="10,460,0,0" Name="whyDonateOrgan" VerticalAlignment="Top" Width="230" Click="whyDonateOrgan_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/whyDIcon.png" Height="100" Width="200"/>
+            </Button>
+            <Button Background="Firebrick" Padding="0" Height="120" HorizontalAlignment="Left" Margin="231,460,0,0" Name="whyDonateBlood" VerticalAlignment="Top" Width="230" Click="whyDonateBlood_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/whyBIcon.png" Height="100" Width="200"/>
+            </Button>
+            <Button Background="YellowGreen" Padding="0" Height="120" HorizontalAlignment="Left" Margin="10,574,0,0" Name="myTimeline" VerticalAlignment="Top" Width="451" Grid.RowSpan="2" Click="myTimeline_Click">
+                <Image Source="/sdkRSSReaderCS;component/Images/timelineIcon.png" Height="90" Width="400"/>
+            </Button>
+         </Grid>
+        
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!-- <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="30">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Organ Donors"/>
+                <shell:ApplicationBarMenuItem Text="Blood Donors"/>
+                <shell:ApplicationBarMenuItem Text="Organ Recipients"/>
+                <shell:ApplicationBarMenuItem Text="Blood Recipients"/>
+                <shell:ApplicationBarMenuItem Click="dononavi" Text="Change City"/>
+                <shell:ApplicationBarMenuItem Text="About Us"/>
+ </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar> -->
+</phone:PhoneApplicationPage>

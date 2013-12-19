@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="sdkRSSReaderCS.howTo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/sdkRSSReaderCS;component/Images/bg1.jpg" Stretch="None" />
+        </Grid.Background>
+        <!--Pivot Control-->
+        <controls:Pivot Foreground="White" Margin="0,-20,0,0">
+            <!--Pivot item one-->
+            <controls:PivotItem Header="Use Timeline" Foreground="Black">
+                <Grid>
+                    <TextBlock Height="553" Padding="10" HorizontalAlignment="Left" Margin="1,-27,0,0" Name="textBlock1" Text="Timeline of this application brings latest updates&#13; of those who have had requested for blood and &#13; organ using the application. It also updates the &#13; names of the donors (blood and organ) if they &#13; had opted out of private posting. &#13;&#13;You can check the list and promote/share the &#13;requests so that the help can reach then faster &#13;as it is broadcasted to your Twitter and Facebook &#13; To do this you need to click on the Request or&#13;Promotion and clck on the post message button.&#13;&#13;Also there options to filter the list, change city&#13;refresh the timeline and a menu for navigation.&#13;The timeline can be only reached if you are &#13;online.&#13;&#13;For any problems you can use contact us button. " VerticalAlignment="Top" Width="453" />
+                </Grid>
+            </controls:PivotItem>
+
+            <!--Pivot item two-->
+            <controls:PivotItem Header="Donate" Foreground="Black">
+                <Grid>
+                    <TextBlock Padding="10" HorizontalAlignment="Left" Margin="1,-18,0,0" Name="textBlock2" Text="You can use Organ Donors and Blood Donors &#13;menu to initiate the process. &#13;&#13;The menu provides you a form which you need&#13;to fill correctly with all required details. Soon &#13;after you have filled the form, press the button&#13;which reads pledge organ/blood donation. &#13;as soon as you click the button the form puts&#13;you through the interface and you will get a &#13;unique donor number. After this phase all your&#13;details are forwarded to concerned NGO'S so&#13;that they can reach out to assist you with the &#13;donation process. Please note that you will be &#13;contacted within 24-48 working hours.&#13;There is also a exclusive timeline which features &#13;all the donors (Respecting privacy).&#13;&#13;After you donate your blood/pledge organ&#13;donation you get all the details from respective&#13;NGO/Hospital only. " VerticalAlignment="Top" Height="571" />
+                </Grid>
+            </controls:PivotItem>
+
+            <!--Pivot item two-->
+            <controls:PivotItem Header="Request" Foreground="Black">
+                <Grid>
+                    <TextBlock Padding="10" HorizontalAlignment="Left" Margin="1,0,0,0" Name="textBlock3" Text="You need to use our Request Organ/Blood menu&#13;in the page you will be able to fill a form which &#13;enlists you to the list which is available to all the &#13;users of this application as well as on the social &#13;media. &#13;&#13;The Concept will increase the chances to many&#13;folds because of innovative social ecosystem to &#13;ensure the helps at time of need. &#13;&#13;Also your requests are available on the timeline&#13;of the App so it can be retweeted/shared on the &#13;facebook and twitter accounts of various users." VerticalAlignment="Top" />
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="30">
+            <shell:ApplicationBarIconButton IconUri="home.png" Text="home" Click="homeIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="filter.png" Text="filter" Click="filterIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="contact.png" Text="contact" Click="contact_Menu" />
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Click="timeLine_Menu" Text="timeline"/>
+                <shell:ApplicationBarMenuItem Click="bloodD_Menu" Text="Blood Donors"/>
+                <shell:ApplicationBarMenuItem Click="whyO_Menu" Text="Why donate organs"/>
+                <shell:ApplicationBarMenuItem Click="whyB_Menu" Text="Why donate blood"/>
+                <shell:ApplicationBarMenuItem Click="organR_Menu" Text="Organ Request"/>
+                <shell:ApplicationBarMenuItem Click="bloodR_Menu" Text="Blood Request"/>
+                <shell:ApplicationBarMenuItem Click="cityChange_Menu" Text="Change Your City"/>
+                <shell:ApplicationBarMenuItem Click="filterNow_Menu" Text="Filter Now"/>
+                <shell:ApplicationBarMenuItem Click="supportUs_Menu" Text="Support meNeedLife"/>
+                <shell:ApplicationBarMenuItem Click="howTo_Menu" Text="How to use MeNeedLife"/>
+                <shell:ApplicationBarMenuItem Click="aboutUs_Menu" Text="About Us"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

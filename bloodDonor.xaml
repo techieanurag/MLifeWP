@@ -1,0 +1,141 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="sdkRSSReaderCS.bloodDonor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="bdLayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/sdkRSSReaderCS;component/Images/bg1.jpg" Stretch="None" />
+        </Grid.Background>
+        <!--Pivot Control-->
+        <controls:Pivot Foreground="White" >
+            <!--Pivot item one-->
+
+            <controls:PivotItem Header="Be a Donor" Foreground="Firebrick">
+
+                <Grid x:Name="panel">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="340" />
+                        <ColumnDefinition Width="400" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="11,20,0,0" Name="textBlock1" Text="Name" VerticalAlignment="Top" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,98,0,0" Name="textBlock3" Text="Mobile" VerticalAlignment="Top" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,301,0,0" Name="textBlock4" Text="BloodGroup" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,183,0,0" Name="textBlock5" Text="City" VerticalAlignment="Top" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,386,0,0" Name="textBlock6" Text="Disease History" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+                    <TextBox Height="72" HorizontalAlignment="Left" Margin="46,0,0,0" Name="bdname" Text="" VerticalAlignment="Top" Width="298" Grid.Column="1" />
+                    <TextBox Height="72" MaxLength="11" HorizontalAlignment="Left" Margin="42,77,0,0" Name="bdmobile" Text="" VerticalAlignment="Top" Width="298" Grid.Column="1" InputScope="Number" />
+                    <RadioButton Foreground="Maroon" Content="Yes" Height="71" HorizontalAlignment="Left" Margin="65,366,0,0" x:Name="bdYes" VerticalAlignment="Top" Width="126" Grid.Column="1" />
+                    <RadioButton Foreground="Green" Content="No" Height="72" HorizontalAlignment="Left" Margin="168,366,0,0" x:Name="bdNo" VerticalAlignment="Top" Grid.Column="1" />
+                    <CheckBox Foreground="RoyalBlue" Content="Yeah" Height="72" HorizontalAlignment="Left" Margin="197,447,0,0" x:Name="bdP" VerticalAlignment="Top" Grid.Column="1" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="11,430,0,0" FontSize="15" Name="textBlock8" Text="(Please select yes if any history of chronic illness or disorder)" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+                    <Button Background="Firebrick" Content="Pledge Blood Donation :)" Height="83" HorizontalAlignment="Left" Margin="-6,510,0,0" Name="button1" VerticalAlignment="Top" Width="436" Grid.ColumnSpan="3" Click="button1_Click" />
+                    <TextBlock Grid.ColumnSpan="2" Height="30" HorizontalAlignment="Left" Margin="12,469,0,0" Name="textBlock9" Text="Do you want this to be Private" VerticalAlignment="Top" Width="306" />
+                    <ListBox Padding="10 0 0 0" Foreground="Firebrick" FontWeight="Bold" BorderBrush="Firebrick" BorderThickness="2" SelectionChanged="bdCity" Tag="{Binding Name}" Height="86" HorizontalAlignment="Left" Margin="58,171,0,0" Name="bCityBox" VerticalAlignment="Top" Width="272" Grid.Column="1">
+                        <ListBox.Items>
+                            <ListBoxItem Content="Mumbai"/>
+                            <ListBoxItem Content="Delhi"/>
+                            <ListBoxItem Content="Pune"/>
+                            <ListBoxItem Content="Bangalore"/>
+                            <ListBoxItem Content="Bhopal"/>
+                            <ListBoxItem Content="Hyderabad"/>
+                            <ListBoxItem Content="Ahmedabad"/>
+                            <ListBoxItem Content="Jaipur"/>
+                            <ListBoxItem Content="Kolkata"/>
+                            <ListBoxItem Content="Patna"/>
+                            <ListBoxItem Content="Ranchi"/>
+                            <ListBoxItem Content="Srinagar"/>
+                            <ListBoxItem Content="Chandigarh"/>
+                            <ListBoxItem Content="Amritsar"/>
+                            <ListBoxItem Content="Lucknow"/>
+                            <ListBoxItem Content="Kanpur"/>
+                            <ListBoxItem Content="Raipur"/>
+                            <ListBoxItem Content="Ahmedabad"/>
+                            <ListBoxItem Content="Panaji"/>
+                            <ListBoxItem Content="Trivendrum"/>
+                            <ListBoxItem Content="Chennai"/>
+                            <ListBoxItem Content="Bhubaneshwar"/>
+                            <ListBoxItem Content="Guwahati"/>
+                            <ListBoxItem Content="Shimla"/>
+                            <ListBoxItem Content="Dehradun"/>
+                        </ListBox.Items>
+                    </ListBox>
+                    <ListBox Padding="10 0 0 0" Foreground="Firebrick" FontWeight="Bold" BorderBrush="Firebrick" BorderThickness="2" SelectionChanged="bdBlood" Tag="{Binding Name}" Height="87" HorizontalAlignment="Left" Margin="60,278,0,0" Name="bBloodBox" VerticalAlignment="Top" Width="272" Grid.Column="1">
+                        <ListBox.Items>
+                            <ListBoxItem Content="Ap"/>
+                            <ListBoxItem Content="An"/>
+                            <ListBoxItem Content="ABp"/>
+                            <ListBoxItem Content="ABn"/>
+                            <ListBoxItem Content="Bp"/>
+                            <ListBoxItem Content="Bn"/>
+                            <ListBoxItem Content="Op"/>
+                            <ListBoxItem Content="On"/>
+                        </ListBox.Items>
+                    </ListBox>
+                    <TextBlock FontWeight="Bold" Foreground="Black" Grid.Column="1" Height="30" HorizontalAlignment="Left" Margin="288,136,0,0" Name="countMob" Text="0/10" VerticalAlignment="Top" />
+                </Grid>
+
+            </controls:PivotItem>
+            
+                
+            <!--Pivot item two-->
+            <controls:PivotItem Header="Donors">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7" />
+                        <ColumnDefinition Width="449" />
+                    </Grid.ColumnDefinitions>
+                    <ListBox Name="bloodListBox" Height="636" HorizontalAlignment="Left" VerticalAlignment="Top" Width="455" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="3,-38,0,0" Grid.ColumnSpan="2" SelectionChanged="bloodListBox_SelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel VerticalAlignment="Top">
+                                    <TextBlock FontFamily="Segoe WP" Name="feedSummary" Foreground="Firebrick"  TextWrapping="Wrap" Margin="12,0,0,0" Text="{Binding Summary.Text, Converter={StaticResource RssTextTrimmer}}" />
+                                    <TextBlock FontSize="12" FontFamily="Calibri" Name="feedPubDate" Foreground="{StaticResource PhoneSubtleBrush}" Margin="12,0,0,10" Text="{Binding PublishDate.DateTime}" />                          
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                   </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+        <TextBlock Height="42" Padding="25,5,0,0" HorizontalAlignment="Left" Name="loadText" Text="loading the blood donors list..." VerticalAlignment="Top" Width="480" />
+        <ProgressBar Foreground="White" x:Name="bDonorPB" IsIndeterminate="True" Margin="0,0,0,711" />
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="30">
+            <shell:ApplicationBarIconButton IconUri="home.png" Text="home" Click="homeIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="appbar.sync.rest.png" Text="refresh" Click="refreshIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="filter.png" Text="filter" Click="filterIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="contact.png" Text="contact" Click="contact_Menu" />
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Click="timeLine_Menu" Text="View Timeline"/>
+                <shell:ApplicationBarMenuItem Click="organD_Menu" Text="Organ Donors"/>
+                <shell:ApplicationBarMenuItem Click="bloodD_Menu" Text="Blood Donors"/>
+                <shell:ApplicationBarMenuItem Click="whyO_Menu" Text="Why donate organs"/>
+                <shell:ApplicationBarMenuItem Click="whyB_Menu" Text="Why donate blood"/>
+                <shell:ApplicationBarMenuItem Click="organR_Menu" Text="Organ Request"/>
+                <shell:ApplicationBarMenuItem Click="bloodR_Menu" Text="Blood Request"/>
+                <shell:ApplicationBarMenuItem Click="cityChange_Menu" Text="Change Your City"/>
+                <shell:ApplicationBarMenuItem Click="filterNow_Menu" Text="Filter Now"/>
+                <shell:ApplicationBarMenuItem Click="supportUs_Menu" Text="Support meNeedLife"/>
+                <shell:ApplicationBarMenuItem Click="aboutUs_Menu" Text="How to use MeNeedLife"/>
+                <shell:ApplicationBarMenuItem Click="howTo_Menu" Text="About Us"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

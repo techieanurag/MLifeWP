@@ -1,0 +1,68 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="sdkRSSReaderCS.contactUs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False" d:DesignHeight="728" d:DesignWidth="480">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/sdkRSSReaderCS;component/Images/bg1.jpg" Stretch="None" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Foreground="White" Text="Contact Us" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="myContentPanel" Margin="10,0,14,0" Grid.Row="1">
+            <TextBlock Foreground="Blue" HorizontalAlignment="Left" Margin="22,30,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top"/>
+            <TextBlock Foreground="Blue" HorizontalAlignment="Left" Margin="22,130,0,0" TextWrapping="Wrap" Text="Mobile" VerticalAlignment="Top"/>
+            <TextBlock Foreground="Blue" Height="30" HorizontalAlignment="Left" Margin="22,232,0,0" Name="textBlock1" Text="Email" VerticalAlignment="Top" />
+            <TextBlock Foreground="Blue" HorizontalAlignment="Left" Margin="22,321,0,0" TextWrapping="Wrap" Text="Message" VerticalAlignment="Top"/>
+            <TextBox Name="cName" HorizontalAlignment="Left" Height="72" Margin="126,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"/>
+            <TextBox Name="cMob" InputScope="Number" MaxLength="11" HorizontalAlignment="Left" Height="72" Margin="126,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"/>
+            <TextBox Name="cMail" InputScope="EmailUserName" Height="72" HorizontalAlignment="Left" Margin="126,212,0,0" Text="" VerticalAlignment="Top" Width="320" />
+            <TextBox Name="cMsg" HorizontalAlignment="Left" Height="172" Margin="126,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"/>
+            <Button Background="SteelBlue" Content="Contact Us" HorizontalAlignment="Left" Margin="14,481,0,0" VerticalAlignment="Top" Width="436" Height="86" Click="contactCLick" />
+            <TextBlock Foreground="Black" FontWeight="Bold" Height="30" HorizontalAlignment="Left" Margin="382,176,0,0" Name="countCheck" Text="0/10" VerticalAlignment="Top" />
+        </Grid>
+        <TextBlock Height="30" Name="cNotify" Text="Enter your details..." Margin="20,1,2,103" />
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="30">
+            <shell:ApplicationBarIconButton IconUri="sendIcon.png" Text="request" Click="contactNow_menu" />
+            <shell:ApplicationBarIconButton IconUri="home.png" Text="home" Click="homeIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="filter.png" Text="filter" Click="filterIcon_Menu" />
+            <shell:ApplicationBarIconButton IconUri="contact.png" Text="contact" Click="contact_Menu" />
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Click="timeLine_Menu" Text="timeline"/>
+                <shell:ApplicationBarMenuItem Click="bloodD_Menu" Text="Blood Donors"/>
+                <shell:ApplicationBarMenuItem Click="whyO_Menu" Text="Why donate organs"/>
+                <shell:ApplicationBarMenuItem Click="whyB_Menu" Text="Why donate blood"/>
+                <shell:ApplicationBarMenuItem Click="organR_Menu" Text="Organ Request"/>
+                <shell:ApplicationBarMenuItem Click="bloodR_Menu" Text="Blood Request"/>
+                <shell:ApplicationBarMenuItem Click="cityChange_Menu" Text="Change Your City"/>
+                <shell:ApplicationBarMenuItem Click="filterNow_Menu" Text="Filter Now"/>
+                <shell:ApplicationBarMenuItem Click="supportUs_Menu" Text="Support meNeedLife"/>
+                <shell:ApplicationBarMenuItem Click="howTo_Menu" Text="How to use MeNeedLife"/>
+                <shell:ApplicationBarMenuItem Click="aboutUs_Menu" Text="About Us"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
